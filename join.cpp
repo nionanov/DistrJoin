@@ -82,13 +82,25 @@ Atom join( Atom& atom1, Atom& atom2) {
     //sorting the relations r1 and r2 according to perm1 and perm2
 //    cout << perm1.size() << " "<< atom1.rel.arity<<endl;
 //    cout << perm2.size() << " "<< atom2.rel.arity<<endl;
-    atom1.rel.sort(perm1);
-    atom2.rel.sort(perm2);
-    
+    cout << "sorting .."<<endl;
     atom1.rel.print();
-    cout << endl;
-    atom2.rel.print();
+    cout << "with permutation "<<endl;
+    printVec(perm1);
+    atom1.rel.sort(perm1);
+    cout << "sorted"<<endl;
     
+    cout << "sorting .."<<endl;
+    atom2.rel.print();
+    cout << "with permutation "<<endl;
+    printVec(perm2);
+    atom2.rel.sort(perm2);
+    cout << "sorted"<<endl;
+    
+    
+//    atom1.rel.print();
+//    cout << endl;
+//    atom2.rel.print();
+//    
     vector<int> vec1{1,2,3};
     vector<int> vec2{2,3,4};
 //    cout << "vec1 < vec2 " << more(vec1, perm1, vec2, perm2) << endl;

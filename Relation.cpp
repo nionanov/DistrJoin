@@ -22,7 +22,8 @@ void Relation::read(string filepath) {
             while (iss >> i) {
                 vec.push_back(i);
             }
-            push_back(vec);
+            if(vec.size() > 0)
+                push_back(vec);
         }
         if(this->size() > 0)
             this->arity = (int)(*this)[0].size();

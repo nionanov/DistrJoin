@@ -13,9 +13,9 @@ int main() {
     string dest = "facebook_out.txt";
     
     Relation r,r1,r2,r3;
-    vector<string> var1{"x", "y", "z"};
-    vector<string> var2{"y", "z", "t"};
-    vector<string> var3{"z", "t", "f"};
+    vector<string> var1{"x", "y"};
+    vector<string> var2{"y", "z"};
+    vector<string> var3{"z", "x"};
     
     r1.read(test_source1);
     r2.read(test_source2);
@@ -28,6 +28,7 @@ int main() {
 //    cout << endl;
 //    atom2.rel.print();
     
+    //Ex4
     Atom temp = join(atom1,atom2);
     Atom a = join(temp, atom3);
     cout << endl;
