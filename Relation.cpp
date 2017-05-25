@@ -23,8 +23,9 @@ void Relation::read(string filepath) {
                 vec.push_back(i);
             }
             push_back(vec);
-            this->arity = (int)vec.size();
         }
+        if(this->size() > 0)
+            this->arity = (int)(*this)[0].size();
     } else {
         cout << "Unable to open file " <<filepath << endl;
     }

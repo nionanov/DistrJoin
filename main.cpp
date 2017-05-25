@@ -9,23 +9,27 @@ int main() {
     string source = "facebook.txt";
     string test_source1 = "test1.txt";
     string test_source2 = "test2.txt";
+    string test_source3 = "test3.txt";
     string dest = "facebook_out.txt";
     
-    Relation r,r1,r2;
+    Relation r,r1,r2,r3;
     vector<string> var1{"x", "y", "z"};
     vector<string> var2{"y", "z", "t"};
+    vector<string> var3{"z", "t", "f"};
     
     r1.read(test_source1);
     r2.read(test_source2);
-    
+    r3.read(test_source3);
     Atom atom1(r1, var1);
     Atom atom2(r2, var2);
+    Atom atom3(r3, var3);
     
 //    atom1.rel.print();
 //    cout << endl;
 //    atom2.rel.print();
-
-    Atom a = join(atom1, atom2);
+    
+    Atom temp = join(atom1,atom2);
+    Atom a = join(temp, atom3);
     cout << endl;
     a.print();
 //    Relation r;
