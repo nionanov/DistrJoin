@@ -32,11 +32,6 @@ void Relation::read(string filepath) {
     }
 }
 
-
-//int Relation::size(){
-//    return (int)vector< vector<int> >::size();
-//}
-
 Relation::Relation(){
     this->arity = 0;
 }

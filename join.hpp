@@ -13,5 +13,6 @@
 #include "Atom.hpp"
 
 Atom join(Atom& atom1, Atom& atom2);
-
+Atom join(vector<Atom> atoms);
+Atom hyperCubeJoin(vector<Atom> atoms);
 #endif /* join_hpp */
